@@ -1,0 +1,21 @@
+<header class="header">
+  <a href="#home" class="logo"
+    >Dinesh
+    <span>Kumar.G</span>
+  </a>
+ <i
+    class="bx"
+    [ngClass]="isMenuOpen ? 'bx-x' : 'bx-menu'"
+    id="menu-icon"
+    (click)="toggleMenu()">
+  </i>
+
+  <!-- <nav class="navbar"> -->
+  <nav class="navbar" [class.active]="isMenuOpen"> 
+  <a routerLink="/home" (click)="closeMenu()">Home</a>
+  <a routerLink="/education" (click)="closeMenu()">Education</a>
+  <a routerLink="/skill" (click)="closeMenu()">Skill</a>
+  <a routerLink="/project" (click)="closeMenu()">Project</a>
+  <a routerLink="/contact" (click)="closeMenu()">Contact</a>
+</nav>
+</header>
