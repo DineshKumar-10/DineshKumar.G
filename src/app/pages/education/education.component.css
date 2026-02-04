@@ -1,82 +1,82 @@
-/* Education Section Design */
+/* ---------------- EDUCATION SECTION ---------------- */
+
+.education {
+  padding: 10rem 8%;
+  background-color: var(--second-color);
+}
 
 .heading {
   font-size: 6rem;
   text-align: center;
-  margin: 5rem 0;
+  margin-bottom: 6rem;
 }
 
-.education {
-  padding: 100px 15px;
-  background-color: var(--second-color);
-}
-
-.education h2 {
-  margin-bottom: 5rem;
-}
+/* ---------------- TIMELINE ---------------- */
 
 .timeline-items {
   max-width: 1200px;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
   position: relative;
 }
 
+/* Vertical center line (Desktop) */
 .timeline-items::before {
   content: "";
   position: absolute;
-  width: 5px;
+  width: 4px;
   height: 100%;
   background-color: var(--main-color);
-  left: calc(50% - 1px);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+/* Timeline item */
 .timeline-item {
-  margin-bottom: 40px;
-  width: 100%;
   position: relative;
+  width: 100%;
+  margin-bottom: 5rem;
 }
-.timeline-item:last-child {
-  margin-bottom: 0;
-}
+
+/* Left side */
 .timeline-item:nth-child(odd) {
-  padding-right: calc(50% + 30px);
+  padding-right: calc(50% + 40px);
   text-align: right;
 }
 
+/* Right side */
 .timeline-item:nth-child(even) {
-  padding-left: calc(50% + 30px);
+  padding-left: calc(50% + 40px);
 }
 
+/* Dot */
 .timeline-dot {
-  height: 21px;
-  width: 21px;
-  background-color: var(--main-color);
-  box-shadow:
-    0 0 25px var(--main-color),
-    0 0 25px var(--main-color);
   position: absolute;
-  left: calc(50% - 8.9px);
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  width: 20px;
+  background-color: var(--main-color);
   border-radius: 50%;
-  top: 10px;
+  box-shadow: 0 0 20px var(--main-color);
 }
 
+/* Date */
 .timeline-date {
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: #fff;
-  margin: 6px 0 15px;
+  margin-bottom: 1rem;
 }
 
+/* Content box */
 .timeline-content {
   background-color: var(--bg-color);
   border: 3px solid var(--main-color);
-  padding: 30px 50px;
-  border-radius: 4rem;
-  box-shadow: 0 0 10px var(--main-color);
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
+  padding: 3rem;
+  border-radius: 3rem;
+  box-shadow: 0 0 15px var(--main-color);
+  transition: 0.3s ease;
 }
 
 .timeline-content:hover {
@@ -85,15 +85,74 @@
 }
 
 .timeline-content h3 {
-  font-size: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
   color: #fff;
-  margin: 0 0 10px;
-  font-weight: 500;
 }
 
 .timeline-content p {
+  font-size: 1.5rem;
+  line-height: 1.8;
   color: #fff;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
+}
+
+/* ================================================= */
+/* ================= MOBILE VIEW =================== */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+  .education {
+    padding: 8rem 5%;
+  }
+
+  .heading {
+    font-size: 4rem;
+  }
+
+  /* Remove center line */
+  .timeline-items::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    padding-left: 60px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+
+  .timeline-dot {
+    left: 10px;
+    transform: translateX(0);
+  }
+  
+  .timeline-date {
+    font-size: 1.6rem;
+    position: relative;
+  top: 15px;
+  }
+  
+  .timeline-content {
+    margin-top: 30px;
+    padding: 2.5rem;
+  }
+}
+
+/* ================================================= */
+/* ================= SMALL PHONES ================== */
+/* ================================================= */
+
+@media (max-width: 480px) {
+
+  .heading {
+    font-size: 3.5rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 2rem;
+  }
+
+  .timeline-content p {
+    font-size: 1.4rem;
+  }
 }
