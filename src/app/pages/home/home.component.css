@@ -87,60 +87,38 @@ section {
 }
 
 /* ---------------- TEXT ANIMATION ---------------- */
-
 .text-animation {
   font-size: 3.4rem;
   font-weight: 600;
 }
 
 .text-animation span {
-  position: relative;
-  display: inline-block;
-  min-width: 260px;
-  white-space: nowrap;
   color: var(--main-color);
+  position: relative;
 }
 
-.text-animation span::before {
-  content: "Frontend Developer";
-  animation: words 20s infinite;
-}
-
+/* Blinking cursor */
 .text-animation span::after {
-  content: "";
-  position: absolute;
-  right: -8px;
-  top: 0;
-  width: calc(100% + 8px);
-  height: 100%;
-  background-color: var(--bg-color, #080808);
-  border-left: 2px solid var(--main-color);
-  animation: cursor 0.6s infinite, typing 20s steps(18) infinite;
+  content: '|';
+  margin-left: 5px;
+  animation: blink 1s infinite;
 }
 
-@keyframes cursor {
-  50% {
-    border-left-color: transparent;
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
   }
 }
 
-@keyframes words {
-  0%, 20% { content: "Frontend Developer"; }
-  21%, 40% { content: "Java Developer"; }
-  41%, 60% { content: "Java Full Stack Developer"; }
-  61%, 80% { content: "Backend Developer"; }
-  81%, 100% { content: "Angular Developer"; }
-}
-
-@keyframes typing {
-  0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90% {
-    width: 0;
-  }
-  5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {
-    width: calc(100% + 8px);
+/* Mobile font fix */
+@media (max-width: 768px) {
+  .text-animation {
+    font-size: 2.4rem;
   }
 }
-
 
 /* ================================================= */
 /* ================= MOBILE VIEW =================== */
