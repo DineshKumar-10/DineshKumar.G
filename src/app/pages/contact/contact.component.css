@@ -41,3 +41,23 @@
 .contact form .btn{
   margin-top: 2rem;
 }
+/* ---------------- BUTTONS ---------------- */
+
+.btn-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 1rem 2.8rem;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  background: var(--main-color);
+  color: #080808;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
