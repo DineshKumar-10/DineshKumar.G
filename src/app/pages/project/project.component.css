@@ -1,0 +1,102 @@
+/* ================= Project SECTION ================= */
+
+.Project {
+  background: var(--second-bg-color);
+  padding: 8rem 5%;
+  color: #fff;
+}
+
+.Project-box {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.Project .heading {
+  margin-bottom: 6rem;
+  font-size: 4rem;
+}
+
+/* ---------- Grid Layout ---------- */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+/* ---------- Testimonial Card ---------- */
+
+.Project-item {
+  background: #080808;
+  border-radius: 2.5rem;
+  padding: 4rem 3rem;
+  border: 3px solid rgba(238, 238, 238, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.Project-item:hover {
+  border-color: var(--main-color);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 35px var(--main-color);
+}
+
+/* ---------- Image ---------- */
+
+.Project-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--main-color);
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+/* ---------- Content ---------- */
+
+.Project-item h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.Project-item p {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+/* ---------- Rating ---------- */
+
+.rating i {
+  color: gold;
+  font-size: 2rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .Project {
+    padding: 6rem 3%;
+  }
+
+  .Project .heading {
+    font-size: 3.2rem;
+  }
+}
