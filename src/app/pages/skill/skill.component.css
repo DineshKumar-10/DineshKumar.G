@@ -1,0 +1,59 @@
+/* Service Section Design */
+.services{
+    background: var(--bg-color);
+    color: #fff;
+}
+
+.services h2{
+    margin-bottom: 5rem;
+    color: #fff;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.service-box{ 
+    background-color: var(--main-color);
+    height: 300px;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.service-box:hover{
+    background: #fff;
+    color: #131313;
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+
+.service-box .service-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    min-height: 200px;
+    justify-content: left;
+    padding: 5rem 5rem;
+}
+
+.service-info h4{
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1;
+    padding-bottom: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.service-info p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    min-height: 100px;
+    line-height: 1.7;
+    margin: auto;
+}
