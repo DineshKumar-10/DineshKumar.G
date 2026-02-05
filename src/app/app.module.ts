@@ -9,6 +9,8 @@ import { ProjectComponent } from './pages/project/project.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { EducationComponent } from './pages/education/education.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,14 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomeComponent,
     SkillComponent,
     ProjectComponent,
-    ContactComponent,
+    // ContactComponent,
     EducationComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
